@@ -1,6 +1,6 @@
 # Face-Triggered SexyBack Player 🎶
 
-Plays **SexyBack by Justin Timberlake** whenever a chosen face appears on screen — automating the “every time X appears, SexyBack plays” trend.  
+Plays **SexyBack by Justin Timberlake** whenever a chosen face appears on screen — automating the “every time X appears, SexyBack plays” trend. Folder in this repo contains pictures of Carlos Sainz.
 
 A fun Python project that runs in the background, watches your screen, and whenever it recognizes a face, it automatically plays SexyBack. When the face disappears, the music stops.
 
