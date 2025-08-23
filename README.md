@@ -31,6 +31,7 @@ This project automates the recent “\[show name\] but every time \[someone\] ap
 ## ⚙️ Quickstart
 
 <br>
+
 1. **Clone the repo:**
    ```bash
    git clone https://github.com/ananyareddygandlaparthi/Face-Triggered-Sexyback-Player.git
