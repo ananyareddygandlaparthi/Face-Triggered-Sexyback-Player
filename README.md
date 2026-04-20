@@ -1,104 +1,86 @@
-# Face-Triggered SexyBack Player 🎶
+# 😎 Face-Triggered SexyBack Player
 
-Plays **SexyBack by Justin Timberlake** whenever a chosen face appears on screen — automating the “every time X appears, SexyBack plays” trend. Folder in this repo contains pictures of Carlos Sainz.
+A fun and slightly dramatic Python application that monitors your screen and automatically plays **SexyBack** (or any song of your choice) the moment your face is detected in the feed! 
 
-A fun Python project that runs in the background, watches your screen, and whenever it recognizes a face, it automatically plays SexyBack. When the face disappears, the music stops.
+---
 
-This project automates the recent “\[show name\] but every time \[someone\] appears SexyBack plays” trend on social media by handling the detection and playback for you.
+## 📌 Overview
 
+This project uses **real-time screen capture** and **facial recognition** to trigger a soundtrack for your presence. It captures frames from your monitor, compares them against a library of "known faces," and manages audio playback dynamically. If you leave the screen, the music stops; if you return, the beat drops again.
 
-<br>
-<br>
-
+---
 
 ## ✨ Features
 
-<br>
+- **Screen-Based Detection**: Unlike traditional webcam apps, this monitors a region of your **screen feed** using `mss`.
+- **Known Face Matching**: Checks detected faces against images stored in the `faces/` directory.
+- **Instant Playback**: Uses `pygame.mixer` for low-latency audio triggering.
+- **Anti-Flicker Logic**: Implements a "missing frame limit" to ensure the music doesn't stop during brief detection gaps.
+- **Customizable**: Easily swap out the trigger song or the face library.
 
-- Real-time face recognition from your screen using **face_recognition** and **mss**
-- Plays and stops music automatically with **pygame**
-- Customizable: just add or swap images in the `faces/` folder — the more you add, the better the recognition
-- Works best with clear, front-facing images (side profiles or obscured faces are less reliable)
-- Lightweight and runs in the background
-- Optional debug mode to see the detected faces on-screen  
+---
 
+## 🛠️ Tech Stack
 
+| Component | Technology |
+|---|---|
+| **Language** | Python |
+| **Face Recognition** | `face_recognition` (dlib-based) |
+| **Image Processing** | `OpenCV` & `NumPy` |
+| **Screen Capture** | `mss` |
+| **Audio Playback** | `Pygame` |
 
-<br>
-<br>
+---
 
+## 📂 Project Structure
 
-## ⚙️ Quickstart
+```
+Facial Recognition Based Song Player/
+├── code.py          # The main detection & playback logic
+├── requirements.txt   # Python dependencies
+├── sexyback.mp3       # The default "entrance" theme
+├── pony.mp3           # Secondary track
+└── faces/             # Place images of yourself here (.jpg, .png)
+```
 
-<br>
+---
 
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/ananyareddygandlaparthi/Face-Triggered-Sexyback-Player.git
-   cd Face-Triggered-Sexyback-Player
-   ```
-<br>
-<br>
+## 🚀 Setup & Installation
 
-2. **Install dependencies:**
-   ```bash
-   pip install face_recognition opencv-python numpy mss pygame
-   ```
-<br>
-<br>
+### Prerequisites
+- Python 3.8+
+- **CMake** (Required for the `face-recognition` library's `dlib` dependency)
 
-   ⚠️ **Note:** `face_recognition` requires `dlib`.  
-   If installation fails, check [these instructions](https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/).
+### 1. Clone the repository
+```bash
+git clone https://github.com/ananyareddygandlaparthi/Face-Triggered-Sexyback-Player.git
+cd Face-Triggered-Sexyback-Player
+```
 
-<br>
-<br>
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-3. **Add your reference images** to the `faces/` folder.  
-   - The more images you add, the better recognition will work.  
-   - Use **clear, front-facing images** (side profiles aren’t great).  
-   - For the sake of example, Carlos Sainz is included by default.  
+> [!IMPORTANT]
+> If you encounter errors installing `face-recognition`, ensure you have **CMake** and **Visual Studio C++ Build Tools** installed on Windows.
 
-<br>
-<br>
+### 3. Add your face
+Place a clear photo of yourself in the `faces/` directory. The app will load all images in this folder as "authorized" triggers.
 
-4. **Place your audio file** in the repo root and name it:  
-   `sexyback.mp3`
+### 4. Run the app
+```bash
+python code.py
+```
 
-<br>
-<br>
+---
 
-5. **Run it:**
-   ```bash
-   python main.py
-   ```
-<br>
-<br>
+## ⚙️ Configuration
 
-6. *(Optional)* Enable debug mode to visualize detection:  
-   In `main.py`, set:  
-   ```python
-   DEBUG_SHOW_FRAME = True
-   ```
-<br>
-<br>
+You can tweak these variables at the top of `code.py`:
+- `MUSIC_FILE`: Change this to `"pony.mp3"` or your favorite track.
+- `FACE_TOLERANCE`: Adjust (lower = stricter) if you get false positives.
+- `MONITOR_REGION`: Defaults to your main monitor.
 
+---
 
-
-## 📌 Notes
-
-<br>
-
-
-- You can swap out the `faces/` images to track whoever you want.  
-- More images = better recognition.  
-- Plays **SexyBack** by default, but you can replace `sexyback.mp3` with any `.mp3`.  
-
-<br>
-<br>
-
-## 🕺 Inspiration
-
-<br>
-
-
-This project is a playful automation of the **“every time \[someone\] appears, SexyBack plays”** trend that’s been circulating on social media. Now it happens in real-time, hands-free.
