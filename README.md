@@ -36,7 +36,7 @@ This project uses **real-time screen capture** and **facial recognition** to tri
 
 ```
 Facial Recognition Based Song Player/
-├── code.py          # The main detection & playback logic
+├── code.py            # The main detection & playback logic
 ├── requirements.txt   # Python dependencies
 ├── sexyback.mp3       # MP3 file
 ├── pony.mp3           # Secondary track (Replace path in file to use)
