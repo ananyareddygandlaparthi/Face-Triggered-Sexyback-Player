@@ -6,7 +6,7 @@ Built using **Python**, **face_recognition**, **OpenCV**, **mss**, and **Pygame*
 
 ## 📌 Overview
 
-This project uses **real-time screen capture** and **facial recognition** to trigger a soundtrack for your presence. It captures frames from your monitor, compares them against a library of "known faces," and manages audio playback dynamically. If you leave the screen, the music stops; if you return, the beat drops again.
+This project uses **real-time screen capture** and **facial recognition** to trigger a soundtrack when your chosen presence appears on screen. It captures frames from your monitor, compares them against a library of "known faces," and manages audio playback dynamically. If the chosen person's face leave the screen, the music stops; if you return, the beat drops again.
 
 ---
 
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 > If you encounter errors installing `face-recognition`, ensure you have **CMake** and **Visual Studio C++ Build Tools** installed on Windows.
 
 ### 3. Add your face
-Place a clear photo of yourself in the `faces/` directory. The app will load all images in this folder as "authorized" triggers.
+Place clear pictures of your chosen person in the `faces/` directory. The app will load all images in this folder as "authorized" triggers.
 
 ### 4. Run the app
 ```bash
