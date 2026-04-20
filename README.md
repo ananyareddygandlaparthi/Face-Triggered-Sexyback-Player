@@ -1,8 +1,8 @@
 # 😎 Face-Triggered SexyBack Player
 
-A fun and slightly dramatic Python application that monitors your screen and automatically plays **SexyBack** (or any song of your choice) the moment your face is detected in the feed! 
+Plays **SexyBack by Justin Timberlake** whenever a chosen face appears on screen — automating the viral *"every time X appears, SexyBack plays"* trend. 
 
----
+Built using **Python**, **face_recognition**, **OpenCV**, **mss**, and **Pygame** for real-time screen monitoring and audio triggering.
 
 ## 📌 Overview
 
@@ -38,9 +38,9 @@ This project uses **real-time screen capture** and **facial recognition** to tri
 Facial Recognition Based Song Player/
 ├── code.py          # The main detection & playback logic
 ├── requirements.txt   # Python dependencies
-├── sexyback.mp3       # MP3 track
-├── pony.mp3           # Secondary track
-└── faces/             # Place images here (.jpg, .png)
+├── sexyback.mp3       # MP3 file
+├── pony.mp3           # Secondary track (Replace path in file to use)
+└── faces/             # Place images of yourself here (.jpg, .png)
 ```
 
 ---
