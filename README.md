@@ -40,7 +40,7 @@ Facial Recognition Based Song Player/
 ├── requirements.txt   # Python dependencies
 ├── sexyback.mp3       # The default "entrance" theme
 ├── pony.mp3           # Secondary track
-└── faces/             # Place images of yourself here (.jpg, .png)
+└── faces/             # Place images here (.jpg, .png)
 ```
 
 ---
